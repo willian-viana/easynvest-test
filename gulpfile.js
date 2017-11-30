@@ -13,9 +13,7 @@ gulp.task('scripts', function() {
 
 gulp.task('less', function () {
   return gulp.src('./styles/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
+    .pipe(less())
     .pipe(gulp.dest('./dist/css'));
 });
 
