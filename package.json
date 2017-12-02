@@ -6,7 +6,7 @@
   "scripts": {
     "test": "eslint ./src",
     "build": "eslint ./src && rm -rf dist && gulp build",
-    "serve": "eslint ./src && rm -rf tmp && gulp serve"
+    "serve": "clear && rm -rf tmp && gulp serve"
   },
   "repository": {
     "type": "git",
