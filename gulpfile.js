@@ -11,6 +11,7 @@ var paths = {
   srcHTML: 'src/**/*.html',
   srcCSS: 'src/**/*.less',
   srcJS: 'src/**/*.js',
+  srcImages: 'src/**/*.png',
   tmp: 'tmp',
   tmpIndex: 'tmp/index.html',
   tmpCSS: 'tmp/**/*.css',
@@ -23,7 +24,7 @@ var paths = {
 
 gulp.task('templates', function() {
   return gulp.src(paths.srcHTML)
-      .pipe(gulp.dest('./tmp/'));
+      .pipe(gulp.dest('./tmp'));
 });
 
 gulp.task('scripts', function() {
@@ -39,7 +40,7 @@ gulp.task('less', function () {
 
 gulp.task('assets', function() {
   return gulp.src(paths.srcImages)
-    .pipe(gulp.dest('./tmp/images'))
+    .pipe(gulp.dest('./tmp/'))
 })
 
 gulp.task('copy', ['templates', 'less', 'assets', 'scripts']);
@@ -57,7 +58,7 @@ gulp.task('serve', ['inject'], function () {
   browserSync.init({
     server: paths.tmp
   })
-  gulp.watch(paths.srcHTML, ['templates'])
+  gulp.watch(paths.srcHTML, ['templates', 'inject'])
   gulp.watch(paths.srcCSS, ['styles'])
   gulp.watch(paths.srcJS, ['scripts'])
   gulp.watch(paths.src).on('change', browserSync.reload);
