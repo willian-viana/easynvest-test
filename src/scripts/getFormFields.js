@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       input.id          = data[form].id,
       input.placeholder = data[form].placeholder,
       input.type        = data[form].type;
+      input.required    = true
 
       dynamicForm.appendChild(input);
     }

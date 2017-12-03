@@ -58,7 +58,7 @@ gulp.task('serve', ['inject'], function () {
   browserSync.init({
     server: paths.tmp
   })
-  gulp.watch(paths.srcHTML, ['templates'])
+  gulp.watch(paths.srcHTML, ['templates', 'inject'])
   gulp.watch(paths.srcCSS, ['styles'])
   gulp.watch(paths.srcJS, ['scripts'])
   gulp.watch(paths.src).on('change', browserSync.reload);
