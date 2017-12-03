@@ -24,7 +24,11 @@
   },
   "homepage": "https://github.com/willian-viana/easynvest-test#readme",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
     "browser-sync": "^2.18.13",
+    "browserify": "^14.5.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
@@ -35,8 +39,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-inject": "^4.3.0",
     "gulp-less": "^3.3.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.2.0"
+    "run-sequence": "^2.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
